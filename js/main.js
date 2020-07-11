@@ -1,6 +1,3 @@
-/* Theme: Niwax - Web Design & Digital Marketing Agency HTML Template
-Author: Rajesh-Doot	
-File Description: Main JS file of the template*/
 (function ($) {
 	"use strict";
 	//Owl-Carousel
@@ -26,18 +23,18 @@ File Description: Main JS file of the template*/
 			}
 		});
 	});
-	//Counter Up	
+	//Counter Up
     $(".counter").counterUp({
 		delay: 10,
 		time: 2500,
-	});	
-	
+	});
+
 	//Scroll to top
 	$.scrollUp({
-		animation: 'fade',		
+		animation: 'fade',
 		scrollImg: { active: true, type: 'background'}
-	});	
-	
+	});
+
 	//Stikey Header
 	$(window).on('scroll', function () {
         var scroll = $(window).scrollTop();
@@ -47,8 +44,8 @@ File Description: Main JS file of the template*/
             $(".navbar").addClass("sticky");
 		}
 	});
-	
-	//Portfolio Filter		
+
+	//Portfolio Filter
 	$('.card-list').imagesLoaded( function() {
 		// init Isotope
 		var $grid = $('.card-list').isotope({
@@ -71,15 +68,15 @@ File Description: Main JS file of the template*/
 		$(this).addClass('is-checked');
 		event.preventDefault();
 	});
-	
-	
-	// Form validation	
+
+
+	// Form validation
 	$("form[name='feedback-form']").validate({
 		// Specify validation rules
-		rules: {			
+		rules: {
 			name: "required",
 			email: {
-				required: true,				
+				required: true,
 				email: true
 			},
 			phone: {
@@ -105,9 +102,9 @@ File Description: Main JS file of the template*/
 				required: "Please enter message",
 				minlength: "Message must be at least 40 characters long"
 			}
-		},		
+		},
 		submitHandler: function (form) {
 			form.submit();
 		}
-	});	
+	});
 })(jQuery);
